@@ -5,7 +5,7 @@
 1. verify uids in `values.yaml`
 1. run
 
-       helm --tiller-namespace tiller upgrade --install prometheus-test coreos/kube-prometheus --namespace prometheus-test -f values.yaml
+       helm install --name mongodb1 -f values.yaml stable/mongodb-replicaset --namespace mongodb
 
 ## Dependency: Tiller
 
