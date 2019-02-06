@@ -1,0 +1,4 @@
+securityContext:
+  fsGroup: 1000110000
+  runAsNonRoot: true
+  runAsUser: 1000110000
