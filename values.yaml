@@ -1,4 +1,15 @@
 securityContext:
-  fsGroup: 1000110000
+  fsGroup:
   runAsNonRoot: true
-  runAsUser: 1000110000
+  runAsUser: 1000660006
+
+affinity:
+  podAntiAffinity:
+    requiredDuringSchedulingIgnoredDuringExecution:
+      - labelSelector:
+          matchExpressions:
+            - key: service
+              operator: In
+              values:
+                - mongodb
+        topologyKey: kubernetes.io/hostname
